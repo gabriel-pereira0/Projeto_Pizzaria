@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global */
+
+:root {
+  --cor-primaria: #da190f;
+  --bg: #13131a;
+  --bg-cart: #0c0c14;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  font-family: 'roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body {
+  background: var(--bg);
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+.heading {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 3.5rem;
+}
+
+.heading span {
+  color: var(--cor-primaria);
+  text-transform: uppercase;
+}
+.btn {
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  background: var(--cor-primaria);
+  color: #fff;
+  font-size: 1.7rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  letter-spacing: 0.2rem;
+}
+
+/* HEADER */
+
+.header {
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .logo img {
+  height: 6.5rem;
+  border-radius: 100%;
+}
+
+.header .navbar a {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+  color: var(--cor-primaria);
+  border-bottom: 0.1rem solid var(--cor-primaria);
+  padding-bottom: 0.5rem;
+}
+
+.header .icons {
+  display: flex;
+  align-items: center;
+}
+
+.header .icons div {
+  margin-left: 1.5rem;
+}
+
+.header .icons div ion-icon {
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.header .icons div ion-icon:hover {
+  color: var(--cor-primaria);
+}
+
+#menu-btn {
+  display: none;
+}
+
+/* HOME */
+
+.home {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: url(./IMG/home.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom: var(--border);
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.home .conteudo {
+  max-width: 60rem;
+  position: relative;
+  z-index: 2;
+}
+
+.home .conteudo h3 {
+  font-size: 6rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.home .conteudo p {
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+/* SOBRE */
+
+.sobre .row {
+  display: flex;
+  align-items: center;
+  background: var(--bg-cart);
+  flex-wrap: wrap;
+  border: var(--border);
+}
+
+.sobre .row .image {
+  flex: 1 1 45rem;
+}
+
+.sobre .row .image img {
+  width: 100%;
+}
+
+.sobre .row .content {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.sobre .row .content h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.sobre .row .content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #ccc;
+}
+
+/* MENU */
+
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.menu .box-container .box {
+  padding: 5rem;
+  text-align: center;
+  border: var(--border);
+  background: var(--bg-cart);
+}
+
+.menu .box-container .box img {
+  height: 18rem;
+  border-radius: 100%;
+}
+
+.menu .box-container .box h3 {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+
+.menu .box-container .box:hover {
+  background: #fff;
+}
+.menu .box-container .box:hover > * {
+  color: black;
+}
+
+/* PROMOÇÕES */
+
+.promocoes .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.promocoes .box-container .box {
+  text-align: center;
+  border: var(--border);
+  padding: 2rem;
+}
+
+.promocoes .box-container .box .icons a ion-icon {
+  height: 3rem;
+  width: 3rem;
+  font-weight: 1.7rem;
+  color: #fff;
+  margin: 0.3rem;
+}
+
+.promocoes .box-container .box .icons a ion-icon:hover {
+  color: var(--cor-primaria);
+}
+
+.promocoes .box-container .box .imagem {
+  padding: 2.5rem 0;
+}
+
+.promocoes .box-container .box .imagem img {
+  height: 25rem;
+}
+
+.promocoes .box-container .box .content h3 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.promocoes .box-container .box .content .stars {
+  padding: 1.5rem 0;
+}
+
+.promocoes .box-container .box .content .stars i {
+  font-size: 2rem;
+  color: var(--cor-primaria);
+}
+
+.promocoes .box-container .box .content .price {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.promocoes .box-container .box .content .price span {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-transform: lowercase;
+}
+
+/* AVALIAÇÕES */
+
+.avaliacoes .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.avaliacoes .box-container .box {
+  border: var(--border);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.avaliacoes .box-container .box p {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: #ccc;
+  padding: 2rem 0;
+}
+
+.avaliacoes .box-container .box .user {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avaliacoes .box-container .box h3 {
+  padding: 1rem 0;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.avaliacoes .box-container .box .star {
+  display: flex;
+  justify-content: center;
+}
+
+.avaliacoes .box-container .box .star i {
+  font-size: 2rem;
+  color: var(--cor-primaria);
+}
+
+/* FOOTER*/
+
+.heading-footer {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.heading-footer span {
+  color: var(--cor-primaria);
+  text-transform: uppercase;
+}
+
+.footer {
+  background: var(--bg);
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 7%;
+}
+
+.footer .container .footer-col {
+  flex: 1 1 25rem;
+  margin: 1rem;
+}
+
+.footer .container .footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .container .footer-col ul li {
+  margin: 1rem 0;
+}
+
+.footer .container .footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s linear;
+}
+
+.footer .container .footer-col ul li a:hover {
+  color: var(--cor-primaria);
+  padding-left: 0.5rem;
+}
+
+.footer .container .footer-col .social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.footer .container .footer-col .social-links ion-icon {
+  color: #ccc;
+  font-size: 3rem;
+  margin: 0.5rem;
+}
+
+.footer .container .footer-col .social-links ion-icon:hover {
+  color: var(--cor-primaria);
+  padding-left: 0.5rem;
+}
+
+.footer .footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  border-top: var(--border);
+  margin-top: 2rem;
+  color: #ccc;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh -9.5rem);
+  }
+
+  .header .navbar a {
+    color: var(--bg-cart);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .home {
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+  }
+  .home .conteudo h3 {
+    font-size: 4.5rem;
+  }
+  .home .conteudo p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
