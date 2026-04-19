@@ -10,11 +10,14 @@ O principal objetivo deste projeto é colocar em prática conceitos como:
 - Estilização de elementos com **CSS**
 - Organização de layout
 - Boas práticas de desenvolvimento web
+  **JavaScript**
+- Usado para abrir e fechar o menu lateral em dispositivos com telas menores.
 
 ## 🛠️ Tecnologias utilizadas
 
 - HTML
 - CSS
+- JavaScript
 
 ## 💻 Sobre o projeto
 
