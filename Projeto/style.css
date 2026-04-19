@@ -6,7 +6,8 @@
   --cor-primaria: #da190f;
   --bg: #13131a;
   --bg-cart: #0c0c14;
-  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  --border: 0.1rem solid
+    rgba(255, 255, 255, 0.3);
 }
 
 * {
@@ -104,7 +105,8 @@ section {
 
 .header .navbar a:hover {
   color: var(--cor-primaria);
-  border-bottom: 0.1rem solid var(--cor-primaria);
+  border-bottom: 0.1rem solid
+    var(--cor-primaria);
   padding-bottom: 0.5rem;
 }
 
@@ -138,7 +140,8 @@ section {
   min-height: 85vh;
   display: flex;
   align-items: center;
-  background: url(./IMG/home.jpg) no-repeat;
+  background: url(./IMG/home.jpg)
+    no-repeat;
   background-size: cover;
   background-position: center;
   border-bottom: var(--border);
@@ -214,7 +217,10 @@ section {
 
 .menu .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(30rem, 1fr)
+  );
   gap: 2rem;
 }
 
@@ -259,7 +265,10 @@ section {
 
 .promocoes .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(30rem, 1fr)
+  );
   gap: 1.5rem;
 }
 
@@ -269,7 +278,12 @@ section {
   padding: 2rem;
 }
 
-.promocoes .box-container .box .icons a ion-icon {
+.promocoes
+  .box-container
+  .box
+  .icons
+  a
+  ion-icon {
   height: 3rem;
   width: 3rem;
   font-weight: 1.7rem;
@@ -277,7 +291,12 @@ section {
   margin: 0.3rem;
 }
 
-.promocoes .box-container .box .icons a ion-icon:hover {
+.promocoes
+  .box-container
+  .box
+  .icons
+  a
+  ion-icon:hover {
   color: var(--cor-primaria);
 }
 
@@ -285,30 +304,56 @@ section {
   padding: 2.5rem 0;
 }
 
-.promocoes .box-container .box .imagem img {
+.promocoes
+  .box-container
+  .box
+  .imagem
+  img {
   height: 25rem;
 }
 
-.promocoes .box-container .box .content h3 {
+.promocoes
+  .box-container
+  .box
+  .content
+  h3 {
   color: #fff;
   font-size: 2.5rem;
 }
 
-.promocoes .box-container .box .content .stars {
+.promocoes
+  .box-container
+  .box
+  .content
+  .stars {
   padding: 1.5rem 0;
 }
 
-.promocoes .box-container .box .content .stars i {
+.promocoes
+  .box-container
+  .box
+  .content
+  .stars
+  i {
   font-size: 2rem;
   color: var(--cor-primaria);
 }
 
-.promocoes .box-container .box .content .price {
+.promocoes
+  .box-container
+  .box
+  .content
+  .price {
   color: #fff;
   font-size: 2.5rem;
 }
 
-.promocoes .box-container .box .content .price span {
+.promocoes
+  .box-container
+  .box
+  .content
+  .price
+  span {
   font-size: 1.5rem;
   font-weight: lighter;
   text-transform: lowercase;
@@ -318,7 +363,10 @@ section {
 
 .avaliacoes .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(30rem, 1fr)
+  );
   gap: 1.5rem;
 }
 
@@ -353,7 +401,11 @@ section {
   justify-content: center;
 }
 
-.avaliacoes .box-container .box .star i {
+.avaliacoes
+  .box-container
+  .box
+  .star
+  i {
   font-size: 2rem;
   color: var(--cor-primaria);
 }
@@ -407,25 +459,41 @@ section {
   transition: all 0.3s linear;
 }
 
-.footer .container .footer-col ul li a:hover {
+.footer
+  .container
+  .footer-col
+  ul
+  li
+  a:hover {
   color: var(--cor-primaria);
   padding-left: 0.5rem;
 }
 
-.footer .container .footer-col .social-links {
+.footer
+  .container
+  .footer-col
+  .social-links {
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin-top: 1.5rem;
 }
 
-.footer .container .footer-col .social-links ion-icon {
+.footer
+  .container
+  .footer-col
+  .social-links
+  ion-icon {
   color: #ccc;
   font-size: 3rem;
   margin: 0.5rem;
 }
 
-.footer .container .footer-col .social-links ion-icon:hover {
+.footer
+  .container
+  .footer-col
+  .social-links
+  ion-icon:hover {
   color: var(--cor-primaria);
   padding-left: 0.5rem;
 }
@@ -437,6 +505,38 @@ section {
   border-top: var(--border);
   margin-top: 2rem;
   color: #ccc;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 18rem;
+  z-index: 1001;
+  background-color: rgba(12, 0, 0, 0.3);
+  box-shadow: -1rem 0 1.5rem
+    rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  backdrop-filter: blur(1rem);
+}
+
+.sidebar a {
+  color: #fff;
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+#btn-close {
+  align-self: flex-end;
+  margin: 1.5rem;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* MEDIA QUERIES */
