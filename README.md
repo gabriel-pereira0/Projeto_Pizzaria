@@ -1,4 +1,4 @@
-# Projeto de Prática - HTML e CSS
+# Projeto de Prática - HTML, CSS e JavaScript
 
 Este repositório foi criado com o objetivo de praticar e aprimorar conhecimentos em **HTML** e **CSS**, desenvolvendo páginas web simples e explorando conceitos fundamentais do desenvolvimento front-end.
 
